@@ -112,21 +112,23 @@ const ArtworkPreview = () => {
         <div className="border-b border-gray-800 my-12"></div>
 
         {/* Challenge & Solution */}
-        <section className="grid md:grid-cols-2 gap-16 items-start">
-          <div>
-            <h3 className="text-3xl font-bold mb-4">The Challenge</h3>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              {artwork.challenge}
-            </p>
-          </div>
-          <div>
-            <h3 className="text-3xl font-bold mb-4">Solution & Impact</h3>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              {artwork.solution}
-            </p>
-          </div>
-        </section>
-
+                        <section className="grid md:grid-cols-2 gap-8 items-stretch">
+                                        <Card className="bg-orange-900/40 border-orange-700/50 p-8 rounded-lg h-full hover:scale-[1.02] hover:shadow-lg hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                                          <CardHeader className="p-0 mb-4">
+                                            <CardTitle className="text-3xl font-bold text-white">The Challenge</CardTitle>
+                                          </CardHeader>
+                                          <CardContent className="p-0">
+                                            <p className="text-gray-300 text-lg leading-relaxed">{artwork.challenge}</p>
+                                          </CardContent>
+                                        </Card>
+                                        <Card className="bg-green-900/40 border-green-700/50 p-8 rounded-lg h-full hover:scale-[1.02] hover:shadow-lg hover:border-cyan-400 transition-all duration-300 ease-in-out">
+                                          <CardHeader className="p-0 mb-4">
+                                            <CardTitle className="text-3xl font-bold text-white">Solution & Impact</CardTitle>
+                                          </CardHeader>
+                                          <CardContent className="p-0">
+                                            <p className="text-gray-300 text-lg leading-relaxed">{artwork.solution}</p>
+                                          </CardContent>
+                                        </Card>                        </section>
         {/* Divider - Conditional based on if Core Features exists */}
         {artwork.coreFeatures && artwork.coreFeatures.length > 0 && (
           <div className="border-b border-gray-800 my-12"></div>
