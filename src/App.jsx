@@ -1,18 +1,14 @@
-import React from "react";
-import LeftSide from "./components/LeftSide";
-import RightSide from "./components/RightSide";
+import { createBrowserRouter } from "react-router-dom";
+import PortfolioLayout from "./pages/PortfolioLayout";
+import ArtworkPreview from "./pages/ArtworkPreview";
 
-const App = () => {
-  return (
-    <div className="bg-gray-900 text-white max-h-screen h-screen flex overflow-hidden">
-      <div className="w-4/12 p-8">
-        <LeftSide />
-      </div>
-      <div className="w-8/12 p-8">
-        <RightSide />
-      </div>
-    </div>
-  );
-};
-
-export default App;
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <PortfolioLayout />,
+  },
+  {
+    path: "/artwork/:id",
+    element: <ArtworkPreview />,
+  },
+]);
