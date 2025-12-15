@@ -66,9 +66,9 @@ export const workflowData = [
     title: 'Discovery & Research',
     description: 'We start by understanding your business goals and user needs through detailed research and analysis.',
     points: [
-      'Stakeholder interviews',
-      'Competitive analysis',
-      'User surveys and personas',
+      { title: 'Stakeholder interviews', description: 'Gathering insights from key stakeholders to align on project goals.' },
+      { title: 'Competitive analysis', description: 'Evaluating competitor products to identify opportunities and threats.' },
+      { title: 'User surveys and personas', description: 'Creating detailed user personas based on survey data to guide design decisions.' },
     ],
   },
   {
@@ -76,9 +76,9 @@ export const workflowData = [
     title: 'Design & Prototyping',
     description: 'Based on the research, we create wireframes, mockups, and interactive prototypes to visualize the user experience.',
     points: [
-      'Low-fidelity wireframing',
-      'High-fidelity mockups',
-      'Interactive prototyping and testing',
+      { title: 'Low-fidelity wireframing', description: 'Sketching basic layouts to define structure and flow.' },
+      { title: 'High-fidelity mockups', description: 'Creating detailed visual designs of the user interface.' },
+      { title: 'Interactive prototyping and testing', description: 'Building clickable prototypes for user feedback and validation.' },
     ],
   },
   {
@@ -86,9 +86,9 @@ export const workflowData = [
     title: 'Development & Implementation',
     description: 'We work closely with developers to ensure the design is implemented accurately and performs well.',
     points: [
-      'Design handoff and documentation',
-      'Frontend development support',
-      'Quality assurance and testing',
+      { title: 'Design handoff and documentation', description: 'Providing developers with detailed design specs and assets.' },
+      { title: 'Frontend development support', description: 'Collaborating with engineers to translate designs into code.' },
+      { title: 'Quality assurance and testing', description: 'Ensuring the final product meets design and quality standards.' },
     ],
   },
 ];

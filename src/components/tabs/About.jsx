@@ -46,28 +46,33 @@ const About = () => {
         <h3 className="text-xl font-bold mb-6 text-cyan-400 text-center">
           How I Work
         </h3>
-        <ol className="relative border-l   border-gray-700">
-          {workflowData.map((step, index) => (
-            <li key={step.id} className="mb-10  ml-8">
-              <span className="absolute  flex items-center justify-center w-8 h-8 bg-cyan-900 rounded-full -left-4 ring-8 ring-gray-900">
-                <span className="text-cyan-400 text-sm font-bold">
-                  {step.id}
-                </span>
-              </span>
-              <h4 className="flex items-center mb-1 text-lg font-semibold text-white">
-                {step.title}
-              </h4>
-              <p className="mb-2 text-base font-normal text-gray-400">
-                {step.description}
-              </p>
-              <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
-                {step.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </li>
+        <div className="space-y-8">
+          {workflowData.map((step) => (
+            <div key={step.id} className="flex items-start gap-4">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-900 text-cyan-400 font-bold shrink-0">
+                {step.id}
+              </div>
+              <div className="flex-grow">
+                <h4 className="text-lg font-semibold text-white mb-1">
+                  {step.title}
+                </h4>
+                <p className="text-base text-gray-400 mb-2">
+                  {step.description}
+                </p>
+                <div className="mt-4 border-l-2 border-gray-700 pl-4">
+                  <div className="space-y-4">
+                    {step.points.map((point, i) => (
+                      <div key={i}>
+                        <p className="text-gray-300">{point.title}</p>
+                        <p className="text-xs text-gray-500">{point.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
 
       {/* Co-worker Feedback section */}
@@ -116,14 +121,13 @@ const About = () => {
                   src={client.logoUrl}
                   alt={client.name}
                   // Added rounded-full, w-20, and h-20 for circle shape and fixed size
-                  className="h-20 w-20 rounded-full object-cover opacity-80" 
+                  className="h-20 w-20 rounded-full object-cover opacity-80"
                 />
               </div>
             ))}
           </Marquee>
         </div>
       </div>
-      
     </div>
   );
 };

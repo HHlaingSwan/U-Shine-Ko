@@ -64,9 +64,9 @@ const Sharing = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pt-4 mt-auto">
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
-                View Details
-                </Button>
+                  <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
+                    View Details
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
@@ -110,9 +110,18 @@ const Sharing = () => {
                   <p className="text-xs text-gray-500 mt-auto">{post.date}</p>
                 </CardContent>
                 <CardFooter className="pt-4">
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
-                Read More
-                </Button>
+                  <Button
+                    asChild
+                    className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                  >
+                    <a
+                      href={post.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read More
+                    </a>
+                  </Button>
                 </CardFooter>
               </Card>
             ))}

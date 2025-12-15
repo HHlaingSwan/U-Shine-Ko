@@ -34,7 +34,7 @@ const RightSide = () => {
         onValueChange={handleTabChange}
         className="flex flex-col h-full"
       >
-        <TabsList className="mb-4 gap-12 p-4 shrink-0">
+        <TabsList className="mb-4 bg-gray-800 text-slate-300 gap-12 p-4 shrink-0">
           <TabsTrigger value="about">About</TabsTrigger>
           <TabsTrigger value="resume">Resume</TabsTrigger>
           <TabsTrigger value="artwork">Artwork</TabsTrigger>

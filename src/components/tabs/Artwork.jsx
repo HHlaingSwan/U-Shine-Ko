@@ -67,13 +67,14 @@ const Artwork = () => {
           onClick={() => setActiveTab("designSystem")}
           className={getTabClassName("designSystem")}
         >
-Design System        </Button>
+          Design System{" "}
+        </Button>
       </div>
       <div className="grow overflow-y-auto hide-scrollbar">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredArtworks.map((artwork) => (
-            <Card key={artwork.id} className="relative group overflow-hidden">
-              <CardContent className="p-0">
+            <Card key={artwork.id} className="relative  group overflow-hidden">
+              <CardContent className="p-0 h-full">
                 <img
                   src={artwork.imageUrl}
                   alt={artwork.title}

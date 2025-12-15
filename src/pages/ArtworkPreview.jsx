@@ -92,10 +92,10 @@ const ArtworkPreview = () => {
             </div>
             <div className="md:col-span-2">
               <h3 className="text-xl font-semibold mb-2 text-gray-300">
-              Expertise
+                Expertise
               </h3>
               <div className="flex flex-wrap gap-2">
-                {artwork.tools.map((tool, index) => (
+                {artwork?.tools?.map((tool, index) => (
                   <span
                     key={index}
                     className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
