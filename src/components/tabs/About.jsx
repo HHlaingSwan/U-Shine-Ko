@@ -115,14 +115,15 @@ const About = () => {
                 <img
                   src={client.logoUrl}
                   alt={client.name}
-                  className="h-20 opacity-80"
-                />{" "}
-                {/* Changed h-10 to h-8 */}
+                  // Added rounded-full, w-20, and h-20 for circle shape and fixed size
+                  className="h-20 w-20 rounded-full object-cover opacity-80" 
+                />
               </div>
             ))}
           </Marquee>
         </div>
       </div>
+      
     </div>
   );
 };

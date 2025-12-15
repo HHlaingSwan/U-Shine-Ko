@@ -20,7 +20,7 @@ const Sharing = () => {
     if (activeTab === "courses") {
       setTabContent(
         <>
-          <h2 className="text-2xl font-bold mb-4">Courses</h2>
+          <h2 className="text-2xl font-bold mb-4">My Courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {courseData.map((course) => (
               <Card
@@ -64,9 +64,9 @@ const Sharing = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pt-4 mt-auto">
-                  <Button variant="secondary" className="w-full">
-                    View Details
-                  </Button>
+                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
+                View Details
+                </Button>
                 </CardFooter>
               </Card>
             ))}
@@ -110,9 +110,9 @@ const Sharing = () => {
                   <p className="text-xs text-gray-500 mt-auto">{post.date}</p>
                 </CardContent>
                 <CardFooter className="pt-4">
-                  <Button variant="secondary" className="w-full">
-                    Read More
-                  </Button>
+                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
+                Read More
+                </Button>
                 </CardFooter>
               </Card>
             ))}

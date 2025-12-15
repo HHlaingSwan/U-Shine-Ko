@@ -1,20 +1,25 @@
-import { PenTool, Code, Search } from "lucide-react";
+import { PenTool, Code, Search, Zap, Smartphone } from "lucide-react";
 
 export const specializations = [
   {
-    icon: PenTool, // Pass the component itself
-    title: 'UI/UX Design',
-    description: 'Creating intuitive and engaging user interfaces that provide a seamless user experience, focusing on usability and aesthetics.',
-  },
-  {
-    icon: Code,
-    title: 'Frontend Development',
-    description: 'Building responsive and performant web applications using modern technologies like React and Tailwind CSS.',
-  },
-  {
-    icon: Search,
+    icon: Code, // Pass the component itself
     title: 'User Research',
-    description: 'Conducting user research to gather insights and validate design decisions, ensuring the final product meets user needs.',
+    description: 'Experienced in conducting user research, usability testing.',
+  },
+  {
+    icon: Zap,
+    title: 'Scalable Design Systems',
+    description: 'Developing modular, reusable components and guidelines to ensure design consistency and efficiency across products and platforms.',
+  },
+  {
+    icon: Smartphone,
+    title: 'Visual Design',
+    description: 'Creating visually compelling and cohesive designs that effectively communicate brand identity and enhance user experience.',
+  },
+  {
+    icon: PenTool,
+    title: 'Master Prototyping',
+    description: 'Expertise in creating interactive prototypes that bring ideas to life and improve user testing and feedback.',
   },
 ];
 
@@ -46,12 +51,13 @@ export const feedback = [
 ];
 
 export const clients = [
-  { name: 'Client A', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Innovate+Co' },
-  { name: 'Client B', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Quantum+Inc' },
-  { name: 'Client C', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Apex+Group' },
-  { name: 'Client D', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=NextGen+Sys' },
-  { name: 'Client E', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Stellar+Solutions' },
-  { name: 'Client F', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Vertex+LLC' },
+  { name: 'Client A', logoUrl: '/clients/brycenmyanmar.jpeg' },
+  { name: 'Client B', logoUrl: '/clients/infinity.jpeg' },
+  { name: 'Client C', logoUrl: '/clients/msis.jpeg' },
+  { name: 'Client D', logoUrl: '/clients/try.jpg' },
+  { name: 'Client E', logoUrl: '/clients/umg.png'},
+  { name: 'Client F', logoUrl: '/clients/weday.png' },
+  { name: 'Client F', logoUrl: '/clients/xan.jpeg' },
 ];
 
 export const workflowData = [

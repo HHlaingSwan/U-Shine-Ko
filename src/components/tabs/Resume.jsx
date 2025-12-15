@@ -17,17 +17,18 @@ const Resume = () => {
         {/* Work Experience Section */}
         <div>
           <h3 className="text-xl font-bold mb-6 text-cyan-400">
-            Work Experience
+            Experience Roadmap
           </h3>
           <div className="relative">
             {experienceData.map((exp, index) => (
               <div key={exp.id} className="flex gap-6 relative pb-8">
                 <div className="relative flex flex-col items-center">
-                  <img
+                <img
                     src={exp.logoUrl}
                     alt={`${exp.company} logo`}
-                    className="w-8 h-8 rounded-full ring-4 ring-gray-800 z-10"
-                  />
+                    // Increased size from w-8 h-8 to w-16 h-16 (adjust these values for desired size)
+                    className="w-10 h-10 rounded-full ring-4 ring-gray-800 z-10 object-cover"
+                />
                   {index < experienceData.length - 1 && (
                     <div className="w-px h-full bg-gray-700/50 mt-2"></div>
                   )}

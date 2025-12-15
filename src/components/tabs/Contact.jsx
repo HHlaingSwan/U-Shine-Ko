@@ -15,7 +15,7 @@ const Contact = () => {
           {/* Map Placeholder */}
           <div className="h-80 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.297449539286!2d-122.41941568468155!3d37.77492957975924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a76b05f9%3A0x469e320f7c006ed!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1671542159654!5m2!1sen!2sin"
+              src="https://www.google.com/maps?q=16.7996167,96.1311819&z=16&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -43,7 +43,7 @@ const Contact = () => {
                     href="mailto:hello@example.com"
                     className="text-base font-medium text-white hover:underline"
                   >
-                    hello@example.com
+                    shineko192015@gmail.com
                   </a>
                 </div>
               </div>
@@ -55,7 +55,7 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-gray-400">Phone</p>
                   <span className="text-base font-medium text-white">
-                    +1 (123) 456-7890
+                    +95 9782436801
                   </span>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-gray-400">Location</p>
                   <span className="text-base font-medium text-white">
-                    Creativity City, CA
+                    Sanchaung Township, Yangon
                   </span>
                 </div>
               </div>

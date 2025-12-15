@@ -1,78 +1,91 @@
 const artworks = [
+  // ------------------------------------------------------------------
+  // PROJECT 1: WeDay - Social Commerce App (FULL DETAILS)
+  // ------------------------------------------------------------------
   {
     id: 1,
-    title: "Responsive Portfolio Website",
-    category: "web",
-    imageUrl:
-      "https://placehold.co/600x400/000000/FFFFFF/png?text=Web+Project+1",
-    projectOverview:
-      "A modern, responsive portfolio website showcasing various design projects. Built with React and Tailwind CSS for a seamless user experience across all devices. The primary goal was to create a clean, minimalist design that puts the focus on the visual work, while ensuring high performance and accessibility.",
+    title: "WeDay - Social Media & eCommerce App",
+    category: "Mobile App",
+    imageUrl:"/project-images/weday/weday-cover.png",
     role: "Lead UI/UX Designer",
     year: "2024",
     teamMembers: 4,
-    client: "Self-initiated",
-    tools: ["React", "Tailwind CSS", "Vite", "Figma"],
+    client: "WeDay Group",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: ["Figma", "User Research", "Prototyping", "Information Architecture", "Dark Mode Design"],
+
+    projectOverview: "WeDay is a next-generation mobile social media and eCommerce app that seamlessly blends connection and commerce. It allows users to transition effortlessly from discovering trends to purchasing products, creating a dynamic ecosystem where community and commerce coexist.",
+    
+    challenge: "Existing platforms siloed social interaction from commerce, creating high friction, requiring users to switch apps, and leading to high cart abandonment rates between inspiration and purchase.",
+    solution: "We implemented an integrated 'Product Post' feature directly within the social feed, simplifying the path to purchase from 5 steps down to 2. This design resulted in a projected 40% increase in product post engagement.",
+
     coreFeatures: [
       {
-        title: "Responsive Design",
+        title: "Unified Shoppable Feed (The Dual-Purpose Scroll)",
         description:
-          "Our website is meticulously designed to adapt and display perfectly across a wide range of devices, including large desktop monitors, tablets, and various mobile phone screens, ensuring an optimal viewing and interaction experience for all users, regardless of their device.",
+          "A **single, fluid Home Feed** intelligently blending user-generated social posts and product listings. Product posts are clearly differentiated with a **prominent 'Shop' badge and price overlay** to reduce friction and maximize 'scroll-to-buy' impulse conversions.",
+        // subFeatures: [
+        //   "Real-time like/comment engagement (social proof)", 
+        //   "Direct 'Quick Buy' button on product cards",
+        //   "Contextual link to dedicated store pages",
+        // ],
       },
       {
-        title: "Interactive Project Filtering",
+        title: "Seller Trust Builder: Live Chat Module",
         description:
-          "Users can easily filter projects by category, technology, or role, allowing them to quickly find the most relevant work samples based on their interests.",
+          "Implemented a robust, direct messaging system accessible from product posts. The module includes **Seller Verification Badges** and a **Transaction History Preview** (e.g., ratings/reviews) to facilitate instant queries, negotiation, and build trust in the platform's e-commerce functionality.",
       },
       {
-        title: "Dynamic Routing",
-        description:
-          "Leveraging dynamic routing, each project has its own dedicated, unique URL, making it easy to share specific artwork details directly with clients or collaborators.",
+        title: "Dynamic Content Reels with Native Product Tagging",
+        description: 
+          "Short-form video content integrated with a **persistent, tappable product overlay**. Creators can tag specific items within the clip, providing a visual, engaging discovery path that links directly from entertainment content to the purchase page.",
       },
+
       {
-        title: "Customizable Theme",
+        title: "Profile Hub: Consolidated Social & Store Management",
         description:
-          "The portfolio includes a built-in theme switcher, allowing visitors to toggle between light and dark modes according to their preference, enhancing accessibility and user comfort.",
-      },
-      {
-        title: "Optimized for Fast Loading Speeds",
-        description:
-          "Performance was a key consideration; the site is optimized with lazy loading, image compression, and code splitting to ensure a blazing-fast loading experience, keeping visitors engaged.",
+          "Designed the User Profile as a **single, segmented dashboard** featuring distinct tabs for **Social Posts**, **Entertainment Clips**, and **Store Listings**. This unified view simplifies activity management and content tracking for both social users and sellers.",
       },
     ],
     uxProcess: [
       {
-        title: "Research & Analysis",
-        description:
-          "The project started with in-depth user research and competitive analysis to identify key user needs, pain points, and design opportunities, which informed the overall project strategy.",
+       
+        title: "Understand & Define: Problem Space",
+        description: "Collaborated with stakeholders (PMs, Developers) to identify the core problem: **fragmented social and shop experiences**. Defined the target user and established measurable **user hypotheses** (e.g., 'Users want instant purchase options within the social feed').",
       },
       {
-        title: "Wireframing & Prototyping",
-        description:
-          "Low-fidelity wireframes and interactive prototypes were created to map out user flows and test core functionalities. This iterative process allowed for early feedback and refinement.",
+        
+        title: "Hypothesize & Plan: Outcome Definition",
+        description: "Converted key assumptions into **testable hypotheses** (e.g., 'We believe a clear 'Shop' badge will increase click-through by 15%'). Prioritized these based on **Impact vs. Effort** and defined the measurable outcomes for validation.",
       },
       {
-        title: "High-Fidelity Mockups",
-        description:
-          "High-fidelity mockups were developed in Figma, focusing on visual hierarchy, typography, color theory, and creating a cohesive brand identity that would resonate with the target audience.",
+      
+        title: "Design & Prototype: Rapid Validation",
+        description: "Created **mid-fidelity prototypes** in Figma, focusing on validating the **Unified Shoppable Feed** and **Live Chat** core flows. Collaborated constantly with development to ensure technical feasibility and fast iteration.",
       },
       {
-        title: "Usability Testing",
-        description:
-          "Throughout the development cycle, usability testing was conducted with real users to identify and address any usability issues, ensuring an intuitive and delightful final product.",
+      
+        title: "Test & Learn: Data-Driven Feedback",
+        description: "Conducted **rapid usability testing** with target users on the prototypes. Collected both **qualitative feedback** (usability issues) and **quantitative data** (task completion rates) to validate or invalidate the initial hypotheses.",
+      },
+      {
+      
+        title: "Iterate & Deliver: Continuous Improvement",
+        description: "Applied insights to refine the final high-fidelity UI. Established a **feedback loop** using analytics to continue iterating post-launch, ensuring continuous refinement of the social and e-commerce experience.",
       },
     ],
-    challenge:
-      "The primary challenge was to create a design that is both visually engaging and extremely fast to load, avoiding the common pitfall of portfolio sites that are slow due to large media assets. It also needed to be easily maintainable.",
-    solution:
-      "Implemented lazy loading for images and code splitting for routes. Used a static site generation approach for the final build to ensure a highly performant and SEO-friendly result. The design focused on strong typography and a clear grid system to showcase work effectively without relying on heavy graphical elements.",
+
     detailImages: [
-      "https://placehold.co/800x600/111111/FFFFFF/png?text=Web+Detail+1.1",
-      "https://placehold.co/600x800/222222/FFFFFF/png?text=Web+Detail+1.2",
-      "https://placehold.co/800x400/333333/FFFFFF/png?text=Web+Detail+1.3",
-      "https://placehold.co/800x800/111111/FFFFFF/png?text=Web+Detail+1.4",
+     "/project-images/weday/interview.png",
+     "/project-images/weday/interview-answer-1.png",
+     "/project-images/weday/interview-answer-2.png",
+     "/project-images/weday/interview-answer-3.png",
+     "/project-images/weday/interview-answer-4.png",
+     "/project-images/weday/interview-answer-5.png",
     ],
-    projectUrl: "https://example.com/portfolio1",
+    
   },
+
   {
     id: 2,
     title: "Mobile Banking App UI/UX",
