@@ -57,11 +57,17 @@ const Artwork = () => {
         </Button>
         <Button
           variant="ghost"
-          onClick={() => setActiveTab("uiux")}
-          className={getTabClassName("uiux")}
+          onClick={() => setActiveTab("brandingLogo")}
+          className={getTabClassName("brandingLogo")}
         >
-          UI/UX Design
+          Branding & Logo
         </Button>
+        <Button
+          variant="ghost"
+          onClick={() => setActiveTab("designSystem")}
+          className={getTabClassName("designSystem")}
+        >
+Design System        </Button>
       </div>
       <div className="grow overflow-y-auto hide-scrollbar">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

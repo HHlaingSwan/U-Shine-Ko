@@ -389,7 +389,7 @@ const artworks = [
   {
     id: 7,
     title: "Travel Booking Website",
-    category: "web",
+    category: "designSystem",
     imageUrl:
       "https://placehold.co/600x400/666666/FFFFFF/png?text=Web+Project+7",
     projectOverview:
@@ -448,7 +448,7 @@ const artworks = [
   {
     id: 8,
     title: "Recipe Sharing Mobile App",
-    category: "uiux",
+    category: "brandingLogo",
     imageUrl:
       "https://placehold.co/600x400/777777/FFFFFF/png?text=Mobile+App+8",
     projectOverview:
