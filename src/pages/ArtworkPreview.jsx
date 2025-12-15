@@ -34,14 +34,14 @@ const ArtworkPreview = () => {
       <Button
         onClick={() => navigate(-1)}
         variant="secondary"
-        className="fixed top-6 left-6 z-50 !text-white bg-black/50 backdrop-blur-sm"
+        className="fixed top-6 left-6 z-50 text-white bg-black/50 backdrop-blur-sm"
       >
         <ArrowLeft className="mr-2 h-4 w-4" /> Back
       </Button>
 
       {/* Header */}
       <header className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-transparent z-10" />
+        <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-950/60 to-transparent z-10" />
         <img
           src={artwork.imageUrl}
           alt={artwork.title}
@@ -67,7 +67,7 @@ const ArtworkPreview = () => {
             <Button
               asChild
               variant="outline"
-              className="text-black mt-4 md:mt-0 flex-shrink-0"
+              className="text-black mt-4 md:mt-0 shrink-0"
             >
               <a
                 href={artwork.projectUrl}
@@ -112,23 +112,32 @@ const ArtworkPreview = () => {
         <div className="border-b border-gray-800 my-12"></div>
 
         {/* Challenge & Solution */}
-                        <section className="grid md:grid-cols-2 gap-8 items-stretch">
-                                        <Card className="bg-orange-900/40 border-orange-700/50 p-8 rounded-lg h-full hover:scale-[1.02] hover:shadow-lg hover:border-cyan-400 transition-all duration-300 ease-in-out">
-                                          <CardHeader className="p-0 mb-4">
-                                            <CardTitle className="text-3xl font-bold text-white">The Challenge</CardTitle>
-                                          </CardHeader>
-                                          <CardContent className="p-0">
-                                            <p className="text-gray-300 text-lg leading-relaxed">{artwork.challenge}</p>
-                                          </CardContent>
-                                        </Card>
-                                        <Card className="bg-green-900/40 border-green-700/50 p-8 rounded-lg h-full hover:scale-[1.02] hover:shadow-lg hover:border-cyan-400 transition-all duration-300 ease-in-out">
-                                          <CardHeader className="p-0 mb-4">
-                                            <CardTitle className="text-3xl font-bold text-white">Solution & Impact</CardTitle>
-                                          </CardHeader>
-                                          <CardContent className="p-0">
-                                            <p className="text-gray-300 text-lg leading-relaxed">{artwork.solution}</p>
-                                          </CardContent>
-                                        </Card>                        </section>
+        <section className="grid md:grid-cols-2 gap-8 items-stretch">
+          <Card className="bg-orange-900/40 border-orange-700/50 p-8 rounded-lg h-full hover:scale-[1.02] hover:shadow-lg hover:border-cyan-400 transition-all duration-300 ease-in-out">
+            <CardHeader className="p-0 mb-4">
+              <CardTitle className="text-3xl font-bold text-white">
+                The Challenge
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <p className="text-gray-300 text-lg leading-relaxed">
+                {artwork.challenge}
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="bg-green-900/40 border-green-700/50 p-8 rounded-lg h-full hover:scale-[1.02] hover:shadow-lg hover:border-cyan-400 transition-all duration-300 ease-in-out">
+            <CardHeader className="p-0 mb-4">
+              <CardTitle className="text-3xl font-bold text-white">
+                Solution & Impact
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <p className="text-gray-300 text-lg leading-relaxed">
+                {artwork.solution}
+              </p>
+            </CardContent>
+          </Card>{" "}
+        </section>
         {/* Divider - Conditional based on if Core Features exists */}
         {artwork.coreFeatures && artwork.coreFeatures.length > 0 && (
           <div className="border-b border-gray-800 my-12"></div>
@@ -182,7 +191,7 @@ const ArtworkPreview = () => {
                   className="flex items-start gap-8 relative pb-12"
                 >
                   {/* Timeline Gutter */}
-                  <div className="relative flex flex-col items-center flex-shrink-0">
+                  <div className="relative flex flex-col items-center shrink-0">
                     {/* The actual line, absolutely positioned */}
                     {index < artwork.uxProcess.length - 1 && (
                       <div className="absolute top-0 bottom-0 w-px bg-gray-700/50 z-0 mt-6 mb-6"></div>

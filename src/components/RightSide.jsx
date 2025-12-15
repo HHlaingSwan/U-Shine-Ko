@@ -43,31 +43,31 @@ const RightSide = () => {
         </TabsList>
         <TabsContent
           value="about"
-          className="flex-grow overflow-y-auto hide-scrollbar"
+          className="grow overflow-y-auto hide-scrollbar"
         >
           <About />
         </TabsContent>
         <TabsContent
           value="resume"
-          className="flex-grow overflow-y-auto hide-scrollbar"
+          className="grow overflow-y-auto hide-scrollbar"
         >
           <Resume />
         </TabsContent>
         <TabsContent
           value="artwork"
-          className="flex-grow overflow-y-auto hide-scrollbar"
+          className="grow overflow-y-auto hide-scrollbar"
         >
           <Artwork />
         </TabsContent>
         <TabsContent
           value="sharing"
-          className="flex-grow overflow-y-auto hide-scrollbar"
+          className="grow overflow-y-auto hide-scrollbar"
         >
           <Sharing />
         </TabsContent>
         <TabsContent
           value="contact"
-          className="flex-grow overflow-y-auto hide-scrollbar"
+          className="grow overflow-y-auto hide-scrollbar"
         >
           <Contact />
         </TabsContent>

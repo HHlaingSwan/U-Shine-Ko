@@ -53,3 +53,36 @@ export const clients = [
   { name: 'Client E', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Stellar+Solutions' },
   { name: 'Client F', logoUrl: 'https://placehold.co/120x50/334155/94a3b8/png?text=Vertex+LLC' },
 ];
+
+export const workflowData = [
+  {
+    id: 1,
+    title: 'Discovery & Research',
+    description: 'We start by understanding your business goals and user needs through detailed research and analysis.',
+    points: [
+      'Stakeholder interviews',
+      'Competitive analysis',
+      'User surveys and personas',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Design & Prototyping',
+    description: 'Based on the research, we create wireframes, mockups, and interactive prototypes to visualize the user experience.',
+    points: [
+      'Low-fidelity wireframing',
+      'High-fidelity mockups',
+      'Interactive prototyping and testing',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Development & Implementation',
+    description: 'We work closely with developers to ensure the design is implemented accurately and performs well.',
+    points: [
+      'Design handoff and documentation',
+      'Frontend development support',
+      'Quality assurance and testing',
+    ],
+  },
+];
