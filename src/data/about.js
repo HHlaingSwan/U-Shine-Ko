@@ -25,27 +25,27 @@ export const specializations = [
 
 export const feedback = [
   {
-    name: 'Jane Doe',
-    position: 'Product Manager',
-    avatarUrl: 'https://placehold.co/40x40/6366f1/FFFFFF/png?text=JD',
-    feedback: 'An exceptional designer with a keen eye for detail. Always delivers high-quality work on time and is a pleasure to work with.',
+    name: 'Htet Hlaing Swan',
+    position: 'React Developer',
+    avatarUrl: 'https://placehold.co/40x40/6366f1/FFFFFF/png?text=HS',
+    feedback: 'U shine is very kind and patient with his subordinates, always teaching and encouraging them. He can apply his specific knowledge well in the workplace and lead.',
   },
   {
-    name: 'John Smith',
-    position: 'Lead Engineer',
-    avatarUrl: 'https://placehold.co/40x40/ec4899/FFFFFF/png?text=JS',
-    feedback: 'Their ability to translate complex requirements into beautiful and functional designs is unmatched. A true asset to any team.',
+    name: 'Htet Aung Ye Yint',
+    position: 'React Developer',
+    avatarUrl: 'https://placehold.co/40x40/ec4899/FFFFFF/png?text=HY',
+    feedback: 'Working with U Shine has been an incredible experience. As a UI/UX tutor, he is  one of my favourites . He has a gift for making complex design concepts easy to understand and is incredibly helpful, both as a teacher and a collaborative work partner. I highly recommend him to anyone looking to master UI/UX design',
   },
   {
-    name: 'Peter Jones',
-    position: 'CEO',
-    avatarUrl: 'https://placehold.co/40x40/22c55e/FFFFFF/png?text=PJ',
-    feedback: 'Top-tier design skills and a professional attitude. Consistently exceeds expectations and contributes to a positive work environment.',
+    name: 'Saung Eaindray Min',
+    position: 'React Developer',
+    avatarUrl: 'https://placehold.co/40x40/22c55e/FFFFFF/png?text=SM',
+    feedback: 'As a Frontend Developer and co-workers, I would like to express my appreciation for U Shine is leadership and collaboration during your time as UI/UX Team Lead.  clear design direction, well-structured UI systems, and emphasis on user experience greatly supported efficient and high-quality frontend implementation.Your attention to detail, consistency in design standards, and openness to cross-functional collaboration made the development process smoother and more effective. The guidance you provided helped ensure strong alignment between design intent and technical execution.Thanks U Shine for better experiences in design system and knowledge.',
   },
   {
-    name: 'Samantha Lee',
+    name: 'Ko Pyae',
     position: 'UX Researcher',
-    avatarUrl: 'https://placehold.co/40x40/f97316/FFFFFF/png?text=SL',
+    avatarUrl: 'https://placehold.co/40x40/f97316/FFFFFF/png?text=KP',
     feedback: 'A highly collaborative and creative partner. Their designs are always well-researched and user-centric.',
   },
 ];
@@ -63,32 +63,45 @@ export const clients = [
 export const workflowData = [
   {
     id: 1,
-    title: 'Discovery & Research',
-    description: 'We start by understanding your business goals and user needs through detailed research and analysis.',
+    title: 'Project Request',
+    description: 'Every project begins with understanding your needs and confirming we ‌are the right fit.',
     points: [
-      { title: 'Stakeholder interviews', description: 'Gathering insights from key stakeholders to align on project goals.' },
-      { title: 'Competitive analysis', description: 'Evaluating competitor products to identify opportunities and threats.' },
-      { title: 'User surveys and personas', description: 'Creating detailed user personas based on survey data to guide design decisions.' },
+      { title: 'Consultation', description: 'You will fill out a short form outlining your goals, target audience, project scope, and timeline.' },
+      { title: 'Review & Assessment', description: 'I carefully evaluate your request to ensure it aligns with my expertise, availability, and design values.' },
+      { title: 'Schedule Intro Call', description: 'If everything matches, we will arrange a video call to discuss your project in depth and align expectations.' },
     ],
   },
   {
     id: 2,
-    title: 'Design & Prototyping',
-    description: 'Based on the research, we create wireframes, mockups, and interactive prototypes to visualize the user experience.',
+    title: 'Design Phase',
+    description: 'This is where ideas turn into structured, research-backed design solutions.',
     points: [
-      { title: 'Low-fidelity wireframing', description: 'Sketching basic layouts to define structure and flow.' },
-      { title: 'High-fidelity mockups', description: 'Creating detailed visual designs of the user interface.' },
-      { title: 'Interactive prototyping and testing', description: 'Building clickable prototypes for user feedback and validation.' },
+      { title: 'Understand', description: 'Sketching basic layouts to define structure and flow.' },
+      { title: 'Explore', description: 'Multiple potential concepts and directions' },
+      { title: 'Decide', description: 'On the strongest idea(s) through discussion and feedback' },
+      { title: 'Prototype', description: 'Wireframes, UI concepts, and interactive prototypes' },
+      { title: 'Validate', description: 'Refine through real user or stakeholder testing' },
     ],
   },
   {
     id: 3,
-    title: 'Development & Implementation',
-    description: 'We work closely with developers to ensure the design is implemented accurately and performs well.',
+    title: 'Presentation & Refinement',
+    description: 'I present the design concepts, explain the reasoning behind each choice, and refine based on your input.',
     points: [
-      { title: 'Design handoff and documentation', description: 'Providing developers with detailed design specs and assets.' },
-      { title: 'Frontend development support', description: 'Collaborating with engineers to translate designs into code.' },
-      { title: 'Quality assurance and testing', description: 'Ensuring the final product meets design and quality standards.' },
+      { title: 'Design Walkthrough', description: 'Review wireframes, UI mockups, and prototypes to explain layout, interactions, and core decisions.' },
+      { title: 'Client Feedback', description: 'We discuss your thoughts, clarify requests, and document improvements for the next iteration.' },
+      { title: 'Refinement & Iteration', description: 'Updates are applied, visuals enhanced, usability improved, and the design is re-presented for approval.' },
+    ],
+  },
+
+  {
+    id: 4,
+    title: 'Development Support',
+    description: 'Once the design is approved, I ensure a smooth transition into development — and support even after launch.',
+    points: [
+      { title: 'Design Handoff', description: 'Provide clean, organized Figma files with style guides, specs, and ready-to-implement screens.' },
+      { title: 'Design Token Guidance', description: 'Explain color systems, typography, spacing, components, and interactions to ensure consistency in build.' },
+      { title: 'Asset & Component Delivery', description: 'Export all assets in required formats and resolutions, optimized for performance and platform standards.' },
     ],
   },
 ];

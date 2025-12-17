@@ -28,51 +28,93 @@ const RightSide = () => {
   };
 
   return (
-    <div className="w-full h-full p-4 md:p-8 bg-gray-800 rounded-lg">
-      <Tabs
-        value={activeTab}
-        onValueChange={handleTabChange}
-        className="flex flex-col h-full"
+    <div className="w-full h-full p-8 md:px-16 md:py-8 bg-gray-800 rounded-lg">
+    <Tabs
+      value={activeTab}
+      onValueChange={handleTabChange}
+      className="flex flex-col h-full "
+    >
+      <TabsList
+        // --- REFINED CLASSES START ---
+        // 1. Left Align: Use 'justify-start' to push items to the left.
+        // 2. Cyan Active BG: Use 'data-[state=active]:bg-cyan-500' on the list to define the active color.
+        className="
+          mb-8
+          bg-gray-800 
+          text-slate-300 
+          gap-4 
+          p-0
+          shrink-0 
+          justify-start 
+          data-[state=active]:bg-cyan-500 
+          data-[state=active]:text-white
+        "
       >
-        <TabsList className="mb-4 bg-gray-800 text-slate-300 gap-12 p-4 shrink-0">
-          <TabsTrigger value="about">About</TabsTrigger>
-          <TabsTrigger value="resume">Resume</TabsTrigger>
-          <TabsTrigger value="artwork">Artwork</TabsTrigger>
-          <TabsTrigger value="sharing">Sharing</TabsTrigger>
-          <TabsTrigger value="contact">Contact</TabsTrigger>
-        </TabsList>
-        <TabsContent
+        <TabsTrigger
           value="about"
-          className="grow overflow-y-auto hide-scrollbar"
+          // Ensure triggers can inherit the active state background
+          className="data-[state=active]:bg-cyan-500 data-[state=active]:text-white bg-gray-700 rounded-full"
         >
-          <About />
-        </TabsContent>
-        <TabsContent
+          About
+        </TabsTrigger>
+        <TabsTrigger
           value="resume"
-          className="grow overflow-y-auto hide-scrollbar"
+          className="data-[state=active]:bg-cyan-500 data-[state=active]:text-white bg-gray-700 rounded-full"
         >
-          <Resume />
-        </TabsContent>
-        <TabsContent
+          Resume
+        </TabsTrigger>
+        <TabsTrigger
           value="artwork"
-          className="grow overflow-y-auto hide-scrollbar"
+          className="data-[state=active]:bg-cyan-500 data-[state=active]:text-white bg-gray-700 rounded-full"
         >
-          <Artwork />
-        </TabsContent>
-        <TabsContent
+          Artwork
+        </TabsTrigger>
+        <TabsTrigger
           value="sharing"
-          className="grow overflow-y-auto hide-scrollbar"
+          className="data-[state=active]:bg-cyan-500 data-[state=active]:text-white bg-gray-700 rounded-full"
         >
-          <Sharing />
-        </TabsContent>
-        <TabsContent
+          Sharing
+        </TabsTrigger>
+        <TabsTrigger
           value="contact"
-          className="grow overflow-y-auto hide-scrollbar"
+          className="data-[state=active]:bg-cyan-500 data-[state=active]:text-white bg-gray-700 rounded-full"
         >
-          <Contact />
-        </TabsContent>
-      </Tabs>
-    </div>
+          Contact
+        </TabsTrigger>
+      </TabsList>
+      <TabsContent
+        value="about"
+        className="grow overflow-y-auto hide-scrollbar"
+      >
+        <About />
+      </TabsContent>
+      {/* ... (Other TabsContent remain the same) ... */}
+      <TabsContent
+        value="resume"
+        className="grow overflow-y-auto hide-scrollbar"
+      >
+        <Resume />
+      </TabsContent>
+      <TabsContent
+        value="artwork"
+        className="grow overflow-y-auto hide-scrollbar"
+      >
+        <Artwork />
+      </TabsContent>
+      <TabsContent
+        value="sharing"
+        className="grow overflow-y-auto hide-scrollbar"
+      >
+        <Sharing />
+      </TabsContent>
+      <TabsContent
+        value="contact"
+        className="grow overflow-y-auto hide-scrollbar"
+      >
+        <Contact />
+      </TabsContent>
+    </Tabs>
+  </div>
   );
 };
 

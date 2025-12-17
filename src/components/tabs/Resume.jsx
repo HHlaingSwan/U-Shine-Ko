@@ -37,8 +37,8 @@ const Resume = () => {
                   <h4 className="text-lg font-semibold text-white">
                     {exp.position}
                   </h4>
-                  <p className="text-cyan-400 text-sm mb-1">{exp.company}</p>
-                  <p className="text-xs text-gray-500 mb-2">{exp.duration}</p>
+                  <p className="text-cyan-400 text-md mb-1">{exp.company}</p>
+                  <p className="text-sm text-gray-500 mb-2">{exp.duration}</p>
                   <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
                     {exp.description.map((point, i) => (
                       <li key={i}>{point}</li>

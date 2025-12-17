@@ -7,64 +7,166 @@ import {
   MapPin,
   Facebook,
   Linkedin,
-  MessageSquare,
+  SunMediumIcon,
+  // Placeholder icon for the fourth social link
+  MessageSquare as PortfolioIconPlaceholder, 
 } from "lucide-react";
 
 const LeftSide = () => {
-  return (
-    <div className="w-full h-full flex flex-col items-center justify-center text-center">
-      <Avatar className="w-32 h-32 mb-4">
-        <AvatarImage src="https://github.com/shadcn.png" alt="Ko Shine" />
-        <AvatarFallback>KS</AvatarFallback>
-      </Avatar>
-      <h1 className="text-3xl font-bold mb-1">Ko Shine</h1>
-      <p className="text-lg text-gray-400 mb-6">UI UX Designer & Mentor</p>
+  // Define a reusable class for the primary accent color
+  const accentColorClass = "text-cyan-400"; 
+  
+  // Define social media data for cleaner rendering
+  const socialLinks = [
+    { name: "facebook", Icon: Facebook, href: "https://www.facebook.com/shine.ko.18659041?mibextid=ZbWKwL" },
+    { name: "linkedin", Icon: Linkedin, href: "https://www.linkedin.com/in/u-shine-720661198/" },
+    { name: "medium", Icon: SunMediumIcon, href: "https://medium.com/@shineko192015" },
+    { name: "portfolio", Icon: PortfolioIconPlaceholder, href: "https://www.behance.net/shineko2/projects" }, 
+  ];
 
-      <div className="w-full bg-gray-800 p-6 rounded-lg">
-        <div className="flex flex-col space-y-4 text-left">
-          <div className="flex items-center">
-            <Mail className="w-5 h-5 mr-4 text-yellow-400" />
+  return (
+    // Outer Container: Defines the 'card' look and overall padding.
+    <div className="
+      w-full h-full flex flex-col items-center justify-start 
+      py-8 px-6                 
+      text-center                  
+      text-white
+      rounded-lg
+    ">
+      
+      {/* 1. Avatar Section */}
+      <Avatar className="w-28 h-28 mb-4 rounded-xl overflow-hidden shadow-md">
+        <AvatarImage src="/clients/designer.png" alt="Shine Ko" className="object-cover" />
+        <AvatarFallback>SK</AvatarFallback>
+      </Avatar>
+      
+      {/* Name */}
+      <h1 className="text-2xl font-bold text-white mb-2 tracking-wider">
+        SHINE KO
+      </h1>
+      
+      {/* 2. Job Title/Pill Tag */}
+      <div className="
+        text-md
+        bg-black/50 border border-gray-800/80
+        text-cyan-400                    
+        bg-transparent                  
+        px-4 py-1                       
+        rounded-full 
+        font-medium 
+        mb-10                                  
+      ">
+        UI UX Designer & Mentor
+      </div>
+          
+      {/* Divider */}
+      <div className="w-full h-px bg-gray-700/50 mt-2 mb-8 max-w-xs" />
+
+      {/* 3. Contact Info Section (Updated with Icon Cards) */}
+      <div className="w-full max-w-xs"> 
+        <div className="flex flex-col space-y-5 text-left pl-2"> 
+          
+          {/* Email */}
+          <div className="flex items-start gap-4">
+            
+            {/* ICON CARD DESIGN */}
+            <div className={`
+                w-12 h-12 flex items-center justify-center 
+                bg-black/50 border border-gray-800/80 rounded-lg 
+                ${accentColorClass}
+            `}>
+                <Mail className={`w-6 h-6`} /> 
+            </div>
+            
             <div>
-              <p className="text-gray-400 text-sm">Email</p>
-              <a href="mailto:example@email.com" className="text-white">
-                example@email.com
+              <p className="text-gray-400 text-xs uppercase pt-1">EMAIL</p>
+              <a href="mailto:shineko192015@gmail.com" className="text-white text-sm font-semibold">
+                ushine.mmk@gmail.com
               </a>
             </div>
           </div>
-          <div className="flex items-center">
-            <Phone className="w-5 h-5 mr-4 text-yellow-400" />
+          
+          {/* Phone */}
+          <div className="flex items-start gap-4">
+            
+            {/* ICON CARD DESIGN */}
+            <div className={`
+                w-12 h-12 flex items-center justify-center 
+                bg-black/50 border border-gray-800/80 rounded-lg 
+                ${accentColorClass}
+            `}>
+                <Phone className={`w-6 h-6`} /> 
+            </div>
+            
             <div>
-              <p className="text-gray-400 text-sm">Phone</p>
-              <p className="text-white">+95 9 123 456 789</p>
+              <p className="text-gray-400 text-xs uppercase pt-1">PHONE</p>
+              <p className="text-white text-sm font-semibold">+95 9782436801</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <Calendar className="w-5 h-5 mr-4 text-yellow-400" />
+          
+          {/* Birthday */}
+          <div className=" flex items-start gap-4">
+            
+            {/* ICON CARD DESIGN */}
+            <div className={`
+                w-12 h-12 flex items-center justify-center 
+                bg-black/50 border border-gray-800/80 rounded-lg 
+                ${accentColorClass}
+            `}>
+                <Calendar className={`w-6 h-6`} /> 
+            </div>
+            
             <div>
-              <p className="text-gray-400 text-sm">Birthday</p>
-              <p className="text-white">Jan 1, 1990</p>
+              <p className="text-gray-400 text-xs uppercase pt-1">BIRTHDAY</p>
+              <p className="text-white text-sm font-semibold">October 31, 1994</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <MapPin className="w-5 h-5 mr-4 text-yellow-400" />
+          
+          {/* Location */}
+          <div className="flex items-start gap-4">
+            
+            {/* ICON CARD DESIGN */}
+            <div className={`
+                w-12 h-12 flex items-center justify-center 
+                bg-black/50 border border-gray-800/80 rounded-lg 
+                ${accentColorClass}
+            `}>
+                <MapPin className={`w-6 h-6`} /> 
+            </div>
+            
             <div>
-              <p className="text-gray-400 text-sm">Location</p>
-              <p className="text-white">Yangon, Myanmar</p>
+              <p className="text-gray-400 text-xs uppercase pt-1">LOCATION</p>
+              <p className="text-white text-sm font-semibold">Yangon,Myanmar</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex space-x-4 mt-6">
-        <a href="#" className="text-gray-400 hover:text-white">
-          <Facebook />
-        </a>
-        <a href="#" className="text-gray-400 hover:text-white">
-          <Linkedin />
-        </a>
-        <a href="#" className="text-gray-400 hover:text-white">
-          <MessageSquare />
-        </a>
+      {/* --- DIVIDER 2: BELOW CONTACT INFO / ABOVE SOCIAL ICONS --- */}
+      <div className="w-full h-px bg-gray-700/50 mt-10 mb-8 max-w-xs" />
+      
+      {/* 4. Social Media Icons (Outlined circles) */}
+      <div className="flex space-x-6">
+        {socialLinks.map(({ name, Icon, href }) => (
+            <a
+              key={name}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`
+                text-white                               
+                bg-black/50 border border-gray-800/80              
+                hover:border-cyan-400 hover:text-cyan-400 
+                rounded-full
+                transition-colors duration-300
+                inline-flex items-center justify-center
+                w-12 h-12                              
+              `}
+              aria-label={name}
+            >
+              <Icon className="w-6 h-6" /> 
+            </a>
+          ))}
       </div>
     </div>
   );
