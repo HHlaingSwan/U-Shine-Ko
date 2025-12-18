@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+
 import { cn } from "@/lib/utils";
 import {
   Card,
@@ -10,78 +21,121 @@ import {
 } from "@/components/ui/card";
 import { courseData } from "@/data/courses";
 import { blogData } from "@/data/blogs";
-import { Users, Clock, BarChart } from "lucide-react";
+import { Users, Clock, BarChart, Calendar } from "lucide-react";
 
 const Sharing = () => {
   const [activeTab, setActiveTab] = useState("courses");
   const [tabContent, setTabContent] = useState(null);
+  const [selectedCourse, setSelectedCourse] = useState(null);
 
   // Function to determine the class names for the filter buttons (Cyan Active BG)
   const getTabClassName = (tabName) => {
     return cn(
       // Base Classes (Inactive State Styling)
       "px-4 py-2 bg-gray-700 text-gray-400 font-medium transition-colors duration-200 rounded-full text-sm hover:text-white hover:bg-gray-700",
-      
+
       {
         // Active State Classes: Cyan Background, Dark Text
-        "bg-cyan-400 text-gray-900 hover:bg-cyan-500 hover:text-gray-900": activeTab === tabName,
+        "bg-cyan-400 text-gray-900 hover:bg-cyan-500 hover:text-gray-900":
+          activeTab === tabName,
       }
     );
   };
-  
+
   // Dynamic Content Setting (Titles are REMOVED from here)
   useEffect(() => {
     if (activeTab === "courses") {
-      
       setTabContent(
         // Removed: <h2 className="text-2xl font-bold mb-4 ">My Courses</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {courseData.map((course) => (
-            <Card
-              key={course.id}
-              className="bg-gray-800 border-gray-700 flex flex-col h-full 
+            <Dialog key={course.id}>
+              <Card
+                className="bg-gray-800 border-gray-700 flex flex-col h-full 
                             hover:shadow-lg hover:border-cyan-400 
                            transition-all duration-300 ease-in-out"
-            >
-              <CardHeader className="flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-xl text-white">
-                  {course.title}
-                </CardTitle>
-                <span
-                  className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                    course.isFinished
-                      ? "bg-green-500/20 text-green-400"
-                      : "bg-yellow-500/20 text-yellow-400"
-                  }`}
-                >
-                  {course.isFinished ? "Finished" : "Ongoing"}
-                </span>
-              </CardHeader>
-              <CardContent className="flex flex-col grow pt-4">
-                <div className="flex flex-col gap-2 text-sm text-gray-300 mb-4">
-                  <div className="flex items-center gap-2">
-                    <BarChart className="w-4 h-4 text-cyan-400" />
-                    <span>Level: {course.level}</span>
+              >
+                <CardHeader className="flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-xl text-white">
+                    {course.title}
+                  </CardTitle>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                      course.isFinished
+                        ? "bg-green-500/20 text-green-400"
+                        : "bg-yellow-500/20 text-yellow-400"
+                    }`}
+                  >
+                    {course.isFinished ? "Finished" : "Ongoing"}
+                  </span>
+                </CardHeader>
+                <CardContent className="flex flex-col grow pt-4">
+                  <div className="flex flex-col gap-2 text-sm text-gray-300 mb-4">
+                    <div className="flex items-center gap-2">
+                      <BarChart className="w-4 h-4 text-cyan-400" />
+                      <span>Level: {course.level}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-cyan-400" />
+                      <span>Duration: {course.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-cyan-400" />
+                      <span>Time: {course.time}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-cyan-400" />
+                      <span>Students: {course.studentCount}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-cyan-400" />
-                    <span>Duration: {course.duration}</span>
+                  <div className="text-sm text-gray-400">
+                    Batch: {course.batch}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-cyan-400" />
-                    <span>Students: {course.studentCount}</span>
+                </CardContent>
+                <CardFooter className="pt-4 mt-auto">
+                  <DialogTrigger asChild>
+                    <Button
+                      onClick={() => setSelectedCourse(course)}
+                      className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                    >
+                      View Details
+                    </Button>
+                  </DialogTrigger>
+                </CardFooter>
+              </Card>
+              {selectedCourse && (
+                <DialogContent className="bg-gray-800 text-white border-gray-700">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl text-cyan-400">
+                      {selectedCourse.title}
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="max-h-[60vh] overflow-y-auto pr-4">
+                    <h3 className="text-lg font-semibold mt-4 mb-2 text-white">Course Outline</h3>
+                    <div className="relative border-l-2 border-cyan-400/30 pl-6 space-y-8">
+                      {selectedCourse.outline.map((item, index) => (
+                        <div key={index} className="relative">
+                          <div className="absolute -left-[34px] top-1.5 h-4 w-4 rounded-full bg-cyan-400 border-4 border-gray-800"></div>
+                          <h4 className="font-semibold text-cyan-400 text-md">{item.title}</h4>
+                          <ul className="list-disc pl-5 space-y-2 text-gray-300 mt-2">
+                            {item.tasks.map((task, taskIndex) => (
+                              <li key={taskIndex} className="text-sm">{task}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                <div className="text-sm text-gray-400">
-                  Batch: {course.batch}
-                </div>
-              </CardContent>
-              <CardFooter className="pt-4 mt-auto">
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
-                  View Details
-                </Button>
-              </CardFooter>
-            </Card>
+                  <DialogFooter>
+                    <DialogClose asChild>
+                      <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              )}
+            </Dialog>
           ))}
         </div>
       );
@@ -139,20 +193,19 @@ const Sharing = () => {
         </div>
       );
     }
-  }, [activeTab]);
+  }, [activeTab, selectedCourse]);
 
   // Determine the title dynamically based on the active tab
   const sectionTitle = activeTab === "courses" ? "My Courses" : "From My Blog";
 
   return (
     <div className="flex flex-col h-full">
-      
       {/* --- NEW STATIC TITLE (Displayed Above Filter) --- */}
       <h2 className="text-2xl font-bold mb-4 ">{sectionTitle}</h2>
       {/* --- END NEW STATIC TITLE --- */}
 
       {/* Tab Filter (Now below the title) */}
-      <div className="mb-6 flex justify-start gap-4"> 
+      <div className="mb-6 flex justify-start gap-4">
         <Button
           variant="ghost"
           onClick={() => setActiveTab("courses")}
@@ -168,7 +221,7 @@ const Sharing = () => {
           Blog
         </Button>
       </div>
-      
+
       {/* Content */}
       <div className="grow overflow-y-auto hide-scrollbar">{tabContent}</div>
     </div>
