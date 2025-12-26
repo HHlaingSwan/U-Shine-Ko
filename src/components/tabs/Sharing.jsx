@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -21,12 +21,57 @@ import {
 } from "@/components/ui/card";
 import { courseData } from "@/data/courses";
 import { blogData } from "@/data/blogs";
-import { Users, Clock, BarChart, Calendar } from "lucide-react";
+import { Users, Clock, BarChart, Calendar, Hourglass, Layers, BookOpen } from "lucide-react";
+
+// Scroll Indicator Component
+const ScrollIndicator = ({ scrollContainerRef }) => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const container = scrollContainerRef?.current;
+    if (!container) return;
+
+    const updateScrollProgress = () => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const maxScroll = scrollHeight - clientHeight;
+      if (maxScroll <= 0) {
+        setScrollProgress(0);
+        return;
+      }
+      const progress = (scrollTop / maxScroll) * 100;
+      setScrollProgress(Math.min(100, Math.max(0, progress)));
+    };
+
+    container.addEventListener('scroll', updateScrollProgress);
+    updateScrollProgress(); // Initial calculation
+
+    // Also update on resize
+    const resizeObserver = new ResizeObserver(updateScrollProgress);
+    resizeObserver.observe(container);
+
+    return () => {
+      container.removeEventListener('scroll', updateScrollProgress);
+      resizeObserver.disconnect();
+    };
+  }, [scrollContainerRef]);
+
+  return (
+    <div className="absolute right-2 top-0 bottom-0 w-1 bg-gray-700/30 rounded-full overflow-hidden">
+      <div
+        className="absolute top-0 right-0 w-full bg-white rounded-full transition-all duration-150 ease-out"
+        style={{
+          height: `${scrollProgress}%`,
+        }}
+      />
+    </div>
+  );
+};
 
 const Sharing = () => {
   const [activeTab, setActiveTab] = useState("courses");
   const [tabContent, setTabContent] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const scrollContainerRef = useRef(null);
 
   // Function to determine the class names for the filter buttons (Cyan Active BG)
   const getTabClassName = (tabName) => {
@@ -104,32 +149,99 @@ const Sharing = () => {
                 </CardFooter>
               </Card>
               {selectedCourse && (
-                <DialogContent className="bg-gray-800 text-white border-gray-700">
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl text-cyan-400">
-                      {selectedCourse.title}
-                    </DialogTitle>
-                  </DialogHeader>
-                  <div className="max-h-[60vh] overflow-y-auto pr-4">
-                    <h3 className="text-lg font-semibold mt-4 mb-2 text-white">Course Outline</h3>
-                    <div className="relative border-l-2 border-cyan-400/30 pl-6 space-y-8">
+                <DialogContent className="bg-gray-900 text-white border-gray-700 max-w-2xl max-h-[90vh] flex flex-col p-0">
+                  {/* Fixed Header Section */}
+                  <div className="flex-shrink-0 px-6 pt-4 pb-4 border-b border-gray-700">
+                    <DialogHeader className="space-y-2">
+                      <DialogTitle className="text-3xl font-bold text-white">
+                        {selectedCourse.title}
+                      </DialogTitle>
+                      {selectedCourse.subtitle && (
+                        <DialogDescription className="text-cyan-400 text-sm">
+                          {selectedCourse.subtitle}
+                        </DialogDescription>
+                      )}
+                    </DialogHeader>
+                    
+                  
+                  </div>
+
+                  {/* Scrollable Course Curriculum Section with Scroll Indicator */}
+                  <div className="flex-1 overflow-y-auto px-6 py-6 relative" ref={scrollContainerRef}>
+
+                      {/* Course Information Cards */}
+                      <div className="grid grid-cols-2 gap-4 mt-0 pb-6 border-b border-gray-700">
+                      {/* Start Date Card */}
+                      <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Calendar className="w-5 h-5 text-cyan-400" />
+                          <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">START DATE</span>
+                        </div>
+                        <p className="text-white font-medium">{selectedCourse.startDate || 'TBD'}</p>
+                      </div>
+                      
+                      {/* Duration Card */}
+                      <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Hourglass className="w-5 h-5 text-cyan-400" />
+                          <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">DURATION</span>
+                        </div>
+                        <p className="text-white font-medium">{selectedCourse.duration}</p>
+                      </div>
+                      
+                      {/* Schedule Card */}
+                      <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Layers className="w-5 h-5 text-cyan-400" />
+                          <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">SCHEDULE</span>
+                        </div>
+                        <p className="text-white font-medium">{selectedCourse.schedule || 'TBD'}</p>
+                      </div>
+                      
+                      {/* Time Card */}
+                      <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Clock className="w-5 h-5 text-cyan-400" />
+                          <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">TIME</span>
+                        </div>
+                        <p className="text-white font-medium">{selectedCourse.time}</p>
+                      </div>
+                    </div>
+                    <ScrollIndicator scrollContainerRef={scrollContainerRef} />
+
+                    
+
+                    <div className="flex items-center gap-3 mt-6 mb-6">
+                      <BookOpen className="w-6 h-6 text-cyan-400" />
+                      <h3 className="text-xl font-semibold text-cyan-400">Course Curriculum</h3>
+                    </div>
+                    <div className="space-y-6 pr-4">
                       {selectedCourse.outline.map((item, index) => (
-                        <div key={index} className="relative">
-                          <div className="absolute -left-[34px] top-1.5 h-4 w-4 rounded-full bg-cyan-400 border-4 border-gray-800"></div>
-                          <h4 className="font-semibold text-cyan-400 text-md">{item.title}</h4>
-                          <ul className="list-disc pl-5 space-y-2 text-gray-300 mt-2">
+                        <div key={index} className="space-y-2">
+                          <div className="flex items-center gap-3">
+                            <span className="bg-gray-700 text-cyan-400 px-3 py-1 rounded-full text-sm font-semibold">
+                              MOD {index + 1}
+                            </span>
+                            <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+                          </div>
+                          <ul className="list-none space-y-2 pl-12">
                             {item.tasks.map((task, taskIndex) => (
-                              <li key={taskIndex} className="text-sm">{task}</li>
+                              <li key={taskIndex} className="text-gray-300 text-sm flex items-start">
+                                <span className="text-cyan-400 mr-2">•</span>
+                                <span>{task}</span>
+                              </li>
                             ))}
                           </ul>
                         </div>
                       ))}
                     </div>
                   </div>
-                  <DialogFooter>
+
+                  {/* Fixed Footer Section */}
+                  <DialogFooter className="flex-shrink-0 px-6 py-4 border-t border-gray-700">
                     <DialogClose asChild>
-                      <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
-                        Close
+                      <Button className="bg-gray-700 hover:bg-gray-600 text-white">
+                        Close Details
                       </Button>
                     </DialogClose>
                   </DialogFooter>

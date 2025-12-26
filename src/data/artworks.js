@@ -231,6 +231,94 @@ const artworks = [
     
   },
 
+      // ------------------------------------------------------------------
+  //  PROJECT 32 : Weday website (FULL DETAILS)
+  // ------------------------------------------------------------------
+  {
+    id: 32,
+    title: "WeDay Webstie",
+    category: "web",
+    tag: "Website",
+    imageUrl:"/project-images/weday-web/image.png",
+    role: "Lead UI UX Designer",
+    year: "2025",
+    teamMembers: "4",
+    client: "WeDay Company",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: [ "Figma",
+            "User Research",
+            "Prototyping",
+            "Information Architecture"
+
+],
+
+    projectOverview: "WeDay is a digital platform designed to help users manage daily activities, events, and social interactions in one centralized experience. The website was created to clearly introduce the product, communicate its value, and support future growth through a scalable and user-friendly design. The focus was on clarity, usability, and visual consistency while keeping the experience engaging and easy to understand.",
+    
+    challenge: "The primary challenge was presenting multiple product features in a way that felt simple rather than overwhelming. The existing structure lacked clear content hierarchy, making it difficult for users to quickly understand the product’s purpose and benefits. Additionally, maintaining visual consistency across different sections while keeping the interface modern and approachable required careful balance between aesthetics and usability.",
+    solution: "The solution focused on creating a clean and structured layout supported by strong visual hierarchy and concise content. Modular sections were introduced to clearly separate information, making the website easier to scan and understand. A consistent design system was applied across the site to ensure cohesion, while thoughtful spacing, typography, and UX writing helped guide users naturally through the experience.",
+
+    coreFeatures: [
+      {
+          title: "Unified Daily Experience",
+          description: "WeDay centralizes daily activities and updates into a single platform, allowing users to manage their routine more efficiently without switching between multiple tools."
+      },
+      {
+          title: "Clear Feature Storytelling",
+          description: "Features are communicated through short titles and supportive descriptions, enabling users to quickly grasp functionality and value at a glance."
+      },
+      {
+          title: "Scalable Design System",
+          description: "Reusable components and consistent visual rules were implemented to ensure the website can easily evolve as new features and content are introduced."
+      },
+      {
+          title: "User-Focused Navigation",
+          description: "Navigation was designed to minimize cognitive load, allowing users to move between sections intuitively and access important information with ease."
+      },
+  ],
+
+
+
+  uxProcess:     [
+    {
+        number: "1",
+        title: "Research & Understanding",
+        description: "This phase focused on understanding the product vision, target users, and business goals. Competitive analysis and usability observations were used to identify common patterns and gaps, helping define a clear direction for the website experience."
+    },
+    {
+        number: "2",
+        title: "Information Architecture",
+        description: "Content was organized into logical sections with clear hierarchy to improve readability and flow. Key information was prioritized to ensure users could understand the product quickly, especially during their first visit."
+    },
+    {
+        number: "3",
+        title: "Wireframing & UI Design",
+        description: "Low-fidelity wireframes were created to validate layout and structure before moving into high-fidelity designs. The UI phase emphasized visual balance, accessibility, and brand alignment while maintaining a clean and modern aesthetic."
+    },
+    {
+        number: "4",
+        title: "Validation & Refinement",
+        description: "The final stage involved reviewing usability, consistency, and responsiveness across devices. Feedback was used to refine spacing, interactions, and content clarity, ensuring a polished and user-friendly final result."
+    },
+],
+
+
+
+    detailImages:  [
+                  
+                "/project-images/weday-web/1.png",
+                "/project-images/weday-web/2.png",
+                "/project-images/weday-web/3.png",
+                "/project-images/weday-web/4.png",
+                "/project-images/weday-web/5.png",
+                "/project-images/weday-web/6.png",
+                "/project-images/weday-web/7.png",
+                "/project-images/weday-web/8.png",
+
+ 
+    ],
+    
+  },
+
   // ------------------------------------------------------------------
   // PROJECT 2: Aptm AudioBook App (FULL DETAILS)
   // ------------------------------------------------------------------
@@ -2997,6 +3085,466 @@ const artworks = [
     ],
     
   },
+
+
+   // ------------------------------------------------------------------
+  //  PROJECT 33 : Pyaw Mae (FULL DETAILS)
+  // ------------------------------------------------------------------
+  {
+    id: 33,
+    title: "Pyaw Mae",
+    category: "web",
+    tag: "web",
+    imageUrl:"/project-images/pyawmal/image.png",
+    role: "Senior UI UX Designer",
+    year: "2023",
+    teamMembers: "3",
+    client: "UMG Company",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: [ "Figma",
+            "User Research",
+            "Prototyping",
+            "Information Architecture"
+
+],
+
+    projectOverview: "Pyaw Mae is a modern and intuitive message conversation web application designed to facilitate seamless communication and interaction between users. With its user-friendly interface, real-time messaging capabilities, and a focus on privacy and security, Pyaw Mae aims to provide an engaging platform for individuals, groups, and communities to connect, collaborate, and share information.",
+    
+    challenge: "",
+    solution: "",
+
+    coreFeatures: [
+      {
+          title: "Real-Time Messaging",
+          description: "Pyaw Mae offers real-time messaging capabilities, allowing users to exchange text messages instantly. This feature is designed to create a dynamic and responsive communication environment, simulating natural conversations."
+      },
+      {
+          title: "User Profiles",
+          description: "Users can create personalized profiles, including display pictures, usernames, and status messages. These profiles help individuals express their identity and establish a sense of familiarity within the application."
+      },
+      {
+          title: "End-to-End Encryption",
+          description: "Security and privacy are paramount in Pyaw Mae. All messages are encrypted using end-to-end encryption, ensuring that only the intended recipients can access the content. This feature enhances user trust and confidentiality."
+      },
+      {
+          title: "User-friendly Interface",
+          description: "The application boasts an intuitive and user-friendly interface that caters to users of all ages and technical backgrounds. The navigation is simple, and the layout encourages easy interaction."
+      },
+  ],
+
+
+
+  uxProcess:     [
+    {
+        number: "1",
+        title: "Research & User Understanding",
+        description: "The UX process began with understanding how users communicate online and the common frustrations they face in existing web messaging platforms. Research focused on user behavior such as message frequency, multitasking needs, and expectations for speed and reliability. Competitive analysis of popular web messaging apps helped identify usability gaps, especially around conversation management, readability, and responsiveness on different screen sizes."
+    },
+    {
+        number: "2",
+        title: "Problem Definition & UX Goals",
+        description: "Based on research insights, key usability problems were defined, including message clutter, unclear conversation states, and inefficient navigation between chats. The primary UX goals were to create a fast, distraction-free messaging experience, ensure clarity in conversation flow, and design an interface that supports both casual and frequent communicators. Accessibility and performance were also prioritized to ensure smooth usage across devices."
+    },
+    {
+        number: "3",
+        title: "Information Architecture & User Flow",
+        description: "The structure of the app was designed to keep core messaging actions within easy reach. Conversations, message threads, and user settings were organized with a clear hierarchy to reduce cognitive load. User flows were mapped for essential tasks such as starting a new conversation, sending messages, searching chats, and managing notifications, ensuring each action required minimal steps."
+    },
+    {
+        number: "4",
+        title: "Wireframing & Interaction Design",
+        description: "Low-fidelity wireframes were created to explore layout options for chat lists, message areas, and input controls. Interaction design focused on real-time feedback, clear message states (sent, delivered, read), and smooth transitions between conversations. Special attention was given to spacing, alignment, and message grouping to improve readability and reduce visual fatigue."
+    },
+    {
+        number: "5",
+        title: "Visual UI Design",
+        description: "The visual design emphasized simplicity and emotional comfort, using a calm color palette and clean typography suitable for long chat sessions. UI components such as message bubbles, timestamps, and action icons were designed consistently to build familiarity. Responsive behavior was carefully considered to ensure the experience remained intuitive across different screen sizes."
+    },
+    {
+        number: "6",
+        title: "Usability Testing & Iteration",
+        description: "Usability testing sessions were conducted to evaluate ease of navigation, message clarity, and interaction speed. Feedback revealed opportunities to improve chat switching, message input behavior, and notification visibility. Iterative refinements were made to enhance efficiency, reduce errors, and ensure the app felt natural to use."
+    },
+],
+
+
+
+    detailImages:  [
+                "/project-images/pyawmal/cover.png",  
+                "/project-images/pyawmal/1.png",
+                "/project-images/pyawmal/2.png",
+                "/project-images/pyawmal/3.png",
+                "/project-images/pyawmal/4.png",
+                "/project-images/pyawmal/5.png",
+
+    ],
+    
+  },
+
+   // ------------------------------------------------------------------
+  //  PROJECT 34 : IBMSW (FULL DETAILS)
+  // ------------------------------------------------------------------
+  {
+    id: 34,
+    title: "Integrated Business Management and Survey Web Application",
+    category: "web",
+    tag: "web",
+    imageUrl:"/project-images/IBMSW/image.png",
+    role: "Senior UI UX Designer",
+    year: "2022",
+    teamMembers: "Solo Goverment Project",
+    client: "Freelance Porject",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: [ "Figma",
+            "User Research",
+            "Prototyping",
+            "Information Architecture"
+
+],
+
+    projectOverview: "The Integrated Business Management and Survey Web Application is a comprehensive solution designed to streamline and optimize various aspects of company operations. This web application encompasses company registration, audit registration, employee registration, a robust managers and workers management system, and a user-friendly survey creation tool. It aims to provide a seamless user experience while enhancing organizational efficiency and data-driven decision-making.",
+    
+    challenge: "",
+    solution: "",
+
+    coreFeatures: [
+      {
+          title: "Company Registration",
+          description: "User-friendly company registration process. Validation and verification of company information. Secure storage of company profiles and documentation."
+      },
+      {
+          title: "Audit Registration",
+          description: "Streamlined audit registration procedure. Integration with company profiles for easy tracking. Document submission and approval workflows."
+      },
+      {
+          title: "Survey Creation",
+          description: "Intuitive UI/UX for survey creation and customization. Flexible question types (multiple-choice, open-ended, etc.). Distribution and data collection management."
+      },
+  ],
+
+
+
+  uxProcess:     [
+    {
+        number: "1",
+        title: "Planning and Design",
+        description: "Define project scope, conduct user research, and create UI/UX design prototypes."
+    },
+    {
+        number: "2",
+        title: "Development",
+        description: "Implement the front-end and back-end components, focusing on company registration, audit registration, employee registration, and user management."
+    },
+    {
+        number: "3",
+        title: "Testing",
+        description: "Thoroughly test the application for functionality, security, and performance."
+    },
+    {
+        number: "4",
+        title: "Training and Documentation",
+        description: "Provide user training and create documentation for administrators."
+    },
+    
+],
+
+
+
+    detailImages:  [
+                "/project-images/IBMSW/01.png", 
+                "/project-images/IBMSW/02.png", 
+                "/project-images/IBMSW/03.png", 
+                "/project-images/IBMSW/04.png", 
+                "/project-images/IBMSW/05.png", 
+                "/project-images/IBMSW/06.png", 
+
+    ],
+    
+  },
+
+    // ------------------------------------------------------------------
+  //  PROJECT 35 : Online Booking System (FULL DETAILS)
+  // ------------------------------------------------------------------
+  {
+    id: 35,
+    title: "Online Booking System",
+    category: "web",
+    tag: "web",
+    imageUrl:"/project-images/online-booking-system/cover.png",
+    role: "Senior UI UX Designer",
+    year: "2022",
+    teamMembers: "4",
+    client: "Brycemmyanmar",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: [ "Figma",
+            "User Research",
+            "Prototyping",
+            "Information Architecture"
+
+],
+
+    projectOverview: "The Online Booking System project aims to develop a user-friendly and efficient platform that allows users to easily book and manage appointments, reservations, and services online. This system will cater to various industries, such as healthcare, hospitality, education, and more, offering a centralized solution for businesses and customers alike.",
+    
+    challenge: "",
+    solution: "",
+
+    coreFeatures: [
+      {
+          title: "User Registration and Authentication",
+          description: "Users can create accounts, log in, and manage their profiles securely."
+      },
+      {
+          title: "Real-time Availability",
+          description: "The system will provide up-to-date information on service availability, preventing overbooking."
+      },
+      {
+          title: "Booking and Reservations",
+          description: "Users can browse available services, select desired dates and times, and make bookings/reservations."
+      },
+      {
+        title: "Payment Integration",
+        description: "Secure payment processing for services requiring upfront payment or deposits."
+    },
+  ],
+
+
+
+  uxProcess:     [
+    {
+        number: "1",
+        title: "Research & User Understanding",
+        description: "The process began with understanding how users book services online and where friction commonly occurs. Research included user interviews, journey analysis, and review of existing booking platforms to identify pain points such as long forms, unclear availability, and confusing pricing. Business requirements like cancellation policies, time slots, and payment flows were also considered to balance user needs with operational constraints."
+    },
+    {
+        number: "2",
+        title: "Information Architecture & Booking Flow",
+        description: "The information architecture was designed to support a logical and step-by-step booking journey. Core elements such as service selection, date and time availability, user details, and payment were structured in a clear sequence. The booking flow was optimized to reduce steps, clearly indicate progress, and allow users to review or modify selections easily."
+    },
+    {
+        number: "3",
+        title: "Visual UI Design",
+        description: "The visual design emphasized clarity, trust, and ease of use. Clean layouts, readable typography, and consistent spacing were applied to support quick decision-making. UI elements such as calendars, buttons, and status indicators were designed to clearly communicate availability, selection, and confirmation states across devices."
+    },
+    {
+        number: "4",
+        title: "Final Validation & Handoff",
+        description: "The final phase focused on validating responsiveness, accessibility, and error handling across different scenarios. UX documentation, user flows, and component guidelines were prepared to support smooth developer handoff, ensuring the booking system could be implemented reliably and scaled in the future."
+    },
+    
+],
+
+
+
+    detailImages:  [
+               "/project-images/online-booking-system/00.png",
+               "/project-images/online-booking-system/01.png",
+               "/project-images/online-booking-system/02.png",
+               "/project-images/online-booking-system/03.png",
+               "/project-images/online-booking-system/04.png",
+               "/project-images/online-booking-system/05.png",
+               "/project-images/online-booking-system/06.png",
+               "/project-images/online-booking-system/07.png",
+
+
+    ],
+    
+  },
+
+      // ------------------------------------------------------------------
+  //  PROJECT 36 : RMS (FULL DETAILS)
+  // ------------------------------------------------------------------
+  {
+    id: 36,
+    title: "Resume Management System",
+    category: "web",
+    tag: "web",
+    imageUrl:"/project-images/RMS/cover.png",
+    role: "Senior UI UX Designer",
+    year: "2022",
+    teamMembers: "4",
+    client: "Brycemmyanmar Company",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: [ "Figma",
+            "User Research",
+            "Prototyping",
+            "Information Architecture"
+
+],
+
+    projectOverview: "The Resume Management System is a web application designed to streamline and enhance the process of managing resumes and candidate profiles within a Human Resource department. This comprehensive tool is tailored to improve the efficiency and effectiveness of HR professionals in their talent acquisition efforts. The project focuses on creating an intuitive and user-friendly UI/UX design to provide an exceptional user experience.",
+    
+    challenge: "",
+    solution: "",
+
+    coreFeatures: [
+      {
+          title: "Job Categories",
+          description: "Create and define job categories that align with your company's unique structure and hierarchy. Whether it's departments, teams, or specialized roles, you have the flexibility to adapt the system to your organization's specific needs."
+      },
+      {
+          title: "Position Creation",
+          description: "Easily add, edit, or remove positions within each job category. Our intuitive interface allows you to provide detailed job descriptions and requirements, ensuring that each role is clearly defined."
+      },
+      {
+          title: "Customization",
+          description: "Tailor the system to your organization's terminology and needs. Add custom fields, responsibilities, and qualifications to accurately represent each position."
+      },
+      {
+        title: "Role-Based Access",
+        description: "Assign role-based access to different team members, allowing them to view and manage job categories and positions as per their responsibilities, maintaining data privacy and security."
+    },
+    {
+        title: "Hierarchical View",
+        description: "Visualize the hierarchy of your job categories and positions, making it easy to understand the structure and reporting relationships within your company."
+    },
+  ],
+
+
+
+  uxProcess:     [
+    {
+        number: "1",
+        title: "Research & Stakeholder Understanding",
+        description: "The process began with understanding the needs of recruiters, HR managers, and hiring teams who interact with resumes on a daily basis. Interviews and workflow analysis helped identify pain points such as manual resume screening, inconsistent candidate data, and time-consuming communication. Competitive analysis of existing applicant tracking systems revealed opportunities to improve efficiency, clarity, and decision-making."
+    },
+    {
+        number: "2",
+        title: "Problem Definition & UX Goals",
+        description: "Insights from research were used to define key problems, including resume overload, lack of visibility into candidate status, and poor filtering capabilities. The main UX goals were to streamline resume review, reduce time-to-hire, and provide clear candidate insights at every stage of the hiring process. The system also aimed to support collaboration among team members while maintaining data accuracy."
+    },
+    {
+        number: "3",
+        title: "Wireframing",
+        description: "Low-fidelity wireframes were created to validate layouts for resume lists, candidate profiles, and dashboards. Interaction design focused on clarity and speed, incorporating features such as bulk actions, status indicators, and inline notes. Special attention was given to resume readability and comparison to support better hiring decisions."
+    },
+    {
+        number: "4",
+        title: "Visual UI Design",
+        description: "The visual design emphasized professionalism, clarity, and consistency. A neutral color palette, structured typography, and clear spacing were used to support long working sessions. UI components such as tables, filters, tags, and action buttons were standardized to create a cohesive and scalable admin experience."
+    },
+     {
+        number: "5",
+        title: "Final Validation & Handoff",
+        description: "The final stage involved validating accessibility, responsiveness, and system performance. Design documentation, user flows, and component specifications were prepared for developer handoff, ensuring the Resume Management System could be implemented accurately and scaled in the future."
+    },
+    
+    
+],
+
+
+
+    detailImages:  [
+                "/project-images/RMS/01.png", 
+                "/project-images/RMS/02.png", 
+                "/project-images/RMS/03.png", 
+                "/project-images/RMS/04.png", 
+                "/project-images/RMS/05.png", 
+                "/project-images/RMS/06.png",
+                "/project-images/RMS/07.png",
+                "/project-images/RMS/08.png", 
+
+    ],
+    
+  },
+
+      // ------------------------------------------------------------------
+  //  PROJECT 37 : Bamaw (FULL DETAILS)
+  // ------------------------------------------------------------------
+  {
+    id: 37,
+    title: "Bamawl HR Redesign",
+    category: "web",
+    tag: "web",
+    imageUrl:"/project-images/bamaw/1.png",
+    role: "Senior UI UX Designer",
+    year: "2022",
+    teamMembers: "4",
+    client: "Brycemmyanmar Company",
+    projectUrl: "https://example.com/portfolio1",
+    expertise: [ "Figma",
+            "User Research",
+            "Prototyping",
+            "Information Architecture"
+
+],
+
+    projectOverview: "The UX Audit for Bamawl HR's web application design is a comprehensive evaluation and improvement initiative aimed at enhancing the user experience (UX) of the company's HR software. This project seeks to identify usability issues, design inconsistencies, and areas for improvement within the existing web application. By conducting a thorough UX audit, we aim to provide actionable recommendations and design solutions that will ultimately lead to a more user-friendly and efficient HR software.image.png",
+    
+    challenge: "",
+    solution: "",
+
+    coreFeatures: [
+      {
+          title: "User-Centric Focus",
+          description: "Prioritize the needs and preferences of end-users to create a seamless and intuitive user experience."
+      },
+      {
+          title: "Usability Evaluation",
+          description: "Identify and address usability issues that hinder user efficiency and satisfaction."
+      },
+      {
+          title: "Consistency and Branding",
+          description: "Ensure design consistency and alignment with Bamawl HR's branding and visual identity."
+      },
+      {
+        title: "Recommendation Prioritization",
+        description: "Provide a clear and prioritized list of recommendations to guide design improvements."
+    },
+    {
+        title: "Enhanced Engagement",
+        description: "Encourage user engagement and satisfaction, leading to increased adoption and positive feedback."
+    },
+  ],
+
+
+
+  uxProcess:     [
+    {
+        number: "1",
+        title: "Requirement Gathering & Localization",
+        description: "This initial phase focuses on understanding the specific legal and cultural landscape of the Myanmar market. Designers and analysts meet with stakeholders to identify the must-have features, such as Social Security Board (SSB) reporting formats, personal income tax laws, and common local holiday structures. This step ensures the software isn't just a generic HR tool, but a solution tailored to local compliance."
+    },
+    {
+        number: "2",
+        title: "Information Architecture (IA)",
+        description: "This involves organizing the massive amount of HR data into a logical structure. The design team decides how to categorize modules (e.g., separating Core HR from Asset Management) so that the navigation is intuitive. The goal is to ensure that any user can find a specific function, such as Roster Planning or Tax History, within two to three clicks."
+    },
+    {
+        number: "3",
+        title: "Wireframing",
+        description: "Before adding colors or logos, the team creates skeletal layouts of the screens. This phase focuses on the layout of data tables and form fields. In an HRMS, wireframing is crucial for ensuring that complex tables (like attendance logs) remain readable on different screen sizes and that Action Buttons (Approve/Reject) are clearly visible."
+    },
+    {
+        number: "4",
+        title: "Visual UI Design",
+        description: "Here, the visual identity is applied. For Bamawl HR, this means using a clean, professional color palette that minimizes eye strain for HR officers who look at the screen for hours. It includes designing custom icons for different HR modules and ensuring that the mobile app interface is thumb-friendly for quick check-ins and check-outs."
+    },
+     {
+        number: "5",
+        title: "Testing & Iterative Refinement",
+        description: "The system undergoes rigorous User Acceptance Testing (UAT). Real HR managers test the workflows to see if the Payroll Logic matches their manual calculations. Based on this feedback, the design is iterated or tweaked—for example, making a button larger or adding a filter to a report—to improve the overall user experience."
+    },
+    
+    
+],
+
+
+
+    detailImages:  [
+                "/project-images/bamaw/image.png",
+                "/project-images/bamaw/2.png",
+                "/project-images/bamaw/3.png",
+                "/project-images/bamaw/4.png",
+                "/project-images/bamaw/5.png",
+                "/project-images/bamaw/6.png",
+                "/project-images/bamaw/7.png",
+                "/project-images/bamaw/8.png",
+
+    ],
+    
+  },
+
+
 
 
 

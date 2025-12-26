@@ -168,31 +168,32 @@ const LeftSide = () => {
 
       {/* 4. Social Media Icons (Outlined circles) */}
       <div className="flex space-x-6">
-        {socialLinks.map(({ name, href, imageSrc }) => (
-          <a
-            key={name}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`
-                text-gray-400
-                bg-white border border-gray-800/80
-                hover:border-cyan-400
-                rounded-full
-                transition-colors duration-300
-                inline-flex items-center justify-center
-                w-12 h-12
-              `}
-            aria-label={name}
-          >
-            <img
-              src={imageSrc}
-              alt={name}
-              className="w-full h-full object-cover"
-            />
-          </a>
-        ))}
-      </div>
+  {socialLinks.map(({ name, href, imageSrc }) => (
+    <a
+      key={name}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`
+          text-gray-400
+          bg-white border border-gray-800/80
+          hover:border-cyan-400
+          rounded-full
+          transition-colors duration-300
+          inline-flex items-center justify-center
+          w-8 h-8
+        `}
+      aria-label={name}
+    >
+      <img
+        src={imageSrc}
+        alt={name}
+        /* Changed from w-full h-full to w-4 h-4 */
+        className="w-10 h-10 object-contain" 
+      />
+    </a>
+  ))}
+</div>
     </div>
   );
 };
