@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     element: <ArtworkPreview />,
   },
   {
-    path: "/design-system",
+    path: "/design-system/:id",
     element: <DesignSystemCaseStudy />,
   },
 ]);
