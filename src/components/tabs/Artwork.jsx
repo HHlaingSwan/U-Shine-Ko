@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye } from "lucide-react";
@@ -11,18 +11,10 @@ const allArtworks = [...artworksData, ...brandingLogoData];
 
 const Artwork = () => {
   const [activeTab, setActiveTab] = useState("all");
-  const [filteredArtworks, setFilteredArtworks] = useState(allArtworks);
-
-  useEffect(() => {
-    if (activeTab === "all") {
-      setFilteredArtworks(allArtworks);
-    } else {
-      const filtered = allArtworks.filter(
-        (artwork) => artwork.category === activeTab
-      );
-      setFilteredArtworks(filtered);
-    }
-  }, [activeTab]);
+  const filteredArtworks =
+    activeTab === "all"
+      ? allArtworks
+      : allArtworks.filter((artwork) => artwork.category === activeTab);
 
   // Function to determine the class names for the filter buttons
   const getTabClassName = (tabName) => {
@@ -34,7 +26,7 @@ const Artwork = () => {
         // Active State Classes: Cyan Background, Dark Text
         "bg-cyan-400 text-gray-900 hover:bg-cyan-500 hover:text-gray-900":
           activeTab === tabName,
-      }
+      },
     );
   };
 
